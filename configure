@@ -3966,7 +3966,7 @@ $as_echo "Found hdf5 with version: $HDF5_VERSION" >&6; }
                      -e 's/[^0-9]//g'`
 
 
-  ax_compare_version_B=`echo "1.8.10" | sed -e 's/\([0-9]*\)/Z\1Z/g' \
+  ax_compare_version_B=`echo "1.8.11" | sed -e 's/\([0-9]*\)/Z\1Z/g' \
                      -e 's/Z\([0-9]\)Z/Z0\1Z/g' \
                      -e 's/Z\([0-9][0-9]\)Z/Z0\1Z/g' \
                      -e 's/Z\([0-9][0-9][0-9]\)Z/Z0\1Z/g' \
@@ -3980,7 +3980,7 @@ x$ax_compare_version_B" | sed 's/^ *//' | sort -r | sed "s/x${ax_compare_version
 
     if test "$ax_compare_version" = "true" ; then
     hdf5_version_sufficient="yes"
-    else as_fn_error $? "The version of hdf5 installed on your system is not sufficient. Please ensure that at least version 1.8.10 is installed" "$LINENO" 5
+    else as_fn_error $? "The version of hdf5 installed on your system is not sufficient. Please ensure that at least version 1.8.11 is installed" "$LINENO" 5
   fi
 
 else
@@ -4014,7 +4014,7 @@ if test "$hdf5_version_sufficient" = "yes"; then
                      -e 's/[^0-9]//g'`
 
 
-  ax_compare_version_B=`echo "1.8.10" | sed -e 's/\([0-9]*\)/Z\1Z/g' \
+  ax_compare_version_B=`echo "1.8.11" | sed -e 's/\([0-9]*\)/Z\1Z/g' \
                      -e 's/Z\([0-9]\)Z/Z0\1Z/g' \
                      -e 's/Z\([0-9][0-9]\)Z/Z0\1Z/g' \
                      -e 's/Z\([0-9][0-9][0-9]\)Z/Z0\1Z/g' \
