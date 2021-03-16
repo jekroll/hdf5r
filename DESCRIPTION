@@ -33,7 +33,7 @@ Suggests:
     nycflights13,
     reshape2,
     formatR,
-SystemRequirements: HDF5 (>= 1.8.13)
+SystemRequirements: HDF5 (>= 1.8.11)
 VignetteBuilder: knitr
 NeedsCompilation: yes
 RoxygenNote: 6.1.1.9000
