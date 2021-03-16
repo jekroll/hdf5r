@@ -9,7 +9,7 @@ AX_LIB_HDF5()
 
 if test "$with_hdf5" = "yes"; then 
 AC_MSG_RESULT([Found hdf5 with version: $HDF5_VERSION])
-AX_COMPARE_VERSION([$HDF5_VERSION], [ge], [1.8.11], [hdf5_version_sufficient="yes"], AC_MSG_ERROR([The version of hdf5 installed on your system is not sufficient. Please ensure that at least version 1.8.13 is installed]))
+AX_COMPARE_VERSION([$HDF5_VERSION], [ge], [1.8.10], [hdf5_version_sufficient="yes"], AC_MSG_ERROR([The version of hdf5 installed on your system is not sufficient. Please ensure that at least version 1.8.10 is installed]))
 else 
   AC_MSG_ERROR([hdf5 does not seem to be installed on your platform.
   Please install the hdf5 library.
@@ -25,8 +25,26 @@ if test "$hdf5_version_sufficient" = "yes"; then
   AX_COMPARE_VERSION(
 	[$HDF5_VERSION], 
 	[ge], 
+	[1.8.10], 
+	[HDF5_VERSION_USE="1_8_10"])
+
+  AX_COMPARE_VERSION(
+	[$HDF5_VERSION], 
+	[ge], 
 	[1.8.11], 
-	[HDF5_VERSION_USE="1_8_14"])
+	[HDF5_VERSION_USE="1_8_11"])
+
+  AX_COMPARE_VERSION(
+	[$HDF5_VERSION], 
+	[ge], 
+	[1.8.12], 
+	[HDF5_VERSION_USE="1_8_12"])
+
+  AX_COMPARE_VERSION(
+	[$HDF5_VERSION], 
+	[ge], 
+	[1.8.13], 
+	[HDF5_VERSION_USE="1_8_13"])
 
   AX_COMPARE_VERSION(
 	[$HDF5_VERSION], 
